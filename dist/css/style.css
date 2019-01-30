@@ -1,15 +1,53 @@
 .canvas{
     background-color: #2bff00;
-    margin-left: 25%;
-    height: 100vh;
-    width: 100vh;
+    height: 16vh;
+    width: 16vh;
+    position: absolute;
+    border-radius:0vh; 
+    animation-timing-function:linear;
+    animation: bola 2s infinite;
+    transition: background-color 1s ease
 }
-div{
-    background-color: #00283c;
+.roda{
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    justify-content: center;
+    width: 50vh;
+    height: 50vh;
+    animation: rodar 2s infinite reverse;
+    animation-delay: 0ms;
+    animation-timing-function:linear;
+}
+
+#app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 body{
+    background-color: #00283c;
+    height: 100vh;
+    width: 100vw;
     margin: 0%;
 }
+
+
+  @-webkit-keyframes rodar {
+    to   {transform:rotate(0deg)}
+    from  {transform:rotate(360deg)}
+  }
+  @keyframes rodar {
+    to   {transform:rotate(0deg)}
+    from  {transform:rotate(360deg)}
+  }
+  @-webkit-keyframes bola {
+    0%   {border-radius:0vh}
+    50%  {border-radius:8vh}
+    100% {border-radius:0vh}
+  }
+  @keyframes bola {
+    0%   {border-radius:0vh}
+    50%  {border-radius:8vh}
+    100% {border-radius:0vh}
+  }

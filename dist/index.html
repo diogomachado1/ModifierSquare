@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Tranformation</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/vue.min.js"></script>
-    </head>
-    <body>
-        <div id="app">
-            <canvas class="canvas" @click='trans' id="1"></canvas>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tranformation</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div  id="roda"  @click='trans' class="roda">
+            <canvas id="bola" class="canvas" id="1"></canvas>
         </div>
-        <script src="/js/Trans.js">
-        </script>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/Trans.js">
+    </script>
+</body>
+
 </html>
