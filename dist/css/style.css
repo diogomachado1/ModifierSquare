@@ -1,23 +1,36 @@
 .canvas{
     background-color: #2bff00;
-    height: 16vh;
-    width: 16vh;
+    height: 8vh;
+    width: 8vh;
     position: absolute;
     border-radius:0vh; 
     animation-timing-function:linear;
-    animation: bola 2s infinite;
+    animation: bola 1s infinite;
     transition: background-color 1s ease
 }
 .roda{
     display: flex;
     justify-content: center;
-    width: 50vh;
+   
     height: 50vh;
     animation: rodar 2s infinite reverse;
     animation-delay: 0ms;
     animation-timing-function:linear;
 }
 
+
+#app :nth-child(2){
+    transform:rotate(40deg)
+}
+#app :nth-child(3){
+    transform:rotate(80deg)
+}
+#app :nth-child(4){
+    transform:rotate(120deg)
+}
+#app :nth-child(5){
+    transform:rotate(160deg)
+}
 #app{
     display: flex;
     justify-content: center;
@@ -33,21 +46,31 @@ body{
 }
 
 
-  @-webkit-keyframes rodar {
-    to   {transform:rotate(0deg)}
-    from  {transform:rotate(360deg)}
+  /* @-webkit-keyframes rodar {
+    0%   {transform:rotate(0deg)}
+    50%  {transform:rotate(360deg)}
+    100%   {transform:rotate(0deg)}
   }
   @keyframes rodar {
+    0%   {transform:rotate(0deg)}
+    50%  {transform:rotate(360deg)}
+    100%   {transform:rotate(0deg)}
+  } */
+  @-webkit-keyframes rodar {
     to   {transform:rotate(0deg)}
-    from  {transform:rotate(360deg)}
+    from {transform:rotate(360deg)}
+  }
+  @keyframes rodar {
+   to   {transform:rotate(0deg)}
+   from  {transform:rotate(360deg)}
   }
   @-webkit-keyframes bola {
-    0%   {border-radius:0vh}
-    50%  {border-radius:8vh}
-    100% {border-radius:0vh}
+    0%   {border-radius:2vh}
+    50%  {border-radius:4vh}
+    100% {border-radius:2vh}
   }
   @keyframes bola {
-    0%   {border-radius:0vh}
-    50%  {border-radius:8vh}
-    100% {border-radius:0vh}
+    0%   {border-radius:2vh}
+    50%  {border-radius:4vh}
+    100% {border-radius:2vh}
   }

@@ -17,11 +17,15 @@ new Vue({
         },
         randomizer(id) {
 
-                let color='#'
-                for(let i = 0;i < 6;i++){
-                    color+=this.hexadecimal()
-                }
-                document.getElementById(id).style.backgroundColor = color
+               
+                const bolas=document.querySelectorAll('#bola')
+                bolas.forEach((bolas)=>{
+                    let color='#'
+                    for(let i = 0;i < 6;i++){
+                        color+=this.hexadecimal()
+                    }
+                    bolas.style.backgroundColor = color
+                })
         },
         hexadecimal(){
             let r = Math.floor(Math.random() *16)//0 1 2 3 4 5 6 7 8 9 A B C D E F
